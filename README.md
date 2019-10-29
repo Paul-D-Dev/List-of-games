@@ -1,6 +1,6 @@
 # AngularCheckpoint2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
+You will find the instructions here : [INSTRUCTIONS](https://github.com/WildCodeSchool/angular-checkpoint2/tree/master/src/assets)
 
 ## Development server
 

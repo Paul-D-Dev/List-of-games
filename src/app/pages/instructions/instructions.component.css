@@ -1,0 +1,13 @@
+.language-selector {
+  width: fit-content;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: 500;
+}

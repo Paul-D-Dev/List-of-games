@@ -1,0 +1,4 @@
+<div class="language-selector">
+  <a (click)="setLanguage('fr')" [class.selected]="language === 'fr'">FR</a> | <a (click)="setLanguage('en')" [class.selected]="language === 'en'">EN</a>
+</div>
+<div markdown src="assets/instructions-{{ language }}.md"></div>
