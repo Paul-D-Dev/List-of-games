@@ -1,1 +1,5 @@
-<p>{{game.rating}}</p>
+<p> Détails jeu :</p>
+<div *ngIf="noGameClicked()">
+  <p>Jeu : {{game.name}}</p>
+  <p>Note : {{game.rating}}</p>
+</div>

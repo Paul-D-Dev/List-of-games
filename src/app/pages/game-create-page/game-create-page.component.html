@@ -39,5 +39,10 @@
   </div>
 
   <button type="submit">Ajoute le jeu</button>
+  <div *ngIf="myForm.valid && myForm.submitted">
+    <p>{{newGame.name}} a été ajouté aux Jeux ! </p>
+  </div>
 </form>
+<button routerLink="">Revenir aux Jeux</button>
+
 

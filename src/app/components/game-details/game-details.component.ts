@@ -13,4 +13,7 @@ export class GameDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  noGameClicked(){
+    return this.game;
+  }
 }
