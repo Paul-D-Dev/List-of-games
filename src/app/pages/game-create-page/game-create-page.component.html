@@ -1,1 +1,43 @@
-<p>game-create-page works!</p>
+<form (submit)="myForm.valid && addNewGame()" #myForm="ngForm">
+
+  <label for="name">Nom du jeu : </label>
+  <input type="text"
+  [(ngModel)]="newGame.name"
+  name="name"
+  #name="ngModel"
+  required>
+  <div *ngIf="name.errors && myForm.submitted">
+    <div *ngIf="name.errors.required">
+      Name is required
+    </div>
+  </div>
+
+  <label for="imageUrl">Affiche</label>
+  <input type="text"
+  [(ngModel)]="newGame.imageUrl"
+  name="imageUrl"
+  #imageUrl="ngModel"
+  required>
+  <div *ngIf="imageUrl.errors && myForm.submitted">
+    <div *ngIf="imageUrl.errors.required">
+      ImageUrl is required
+    </div>
+  </div>
+
+  <label for="rating">Note : </label>
+  <input type="number"
+  [(ngModel)]="newGame.rating"
+  name="rating"
+  #rating="ngModel"
+  required
+  min="0"
+  max="5">
+  <div *ngIf="rating.errors && myForm.submitted">
+    <div *ngIf="rating.errors.required">
+      Rating is required
+    </div>
+  </div>
+
+  <button type="submit">Ajoute le jeu</button>
+</form>
+

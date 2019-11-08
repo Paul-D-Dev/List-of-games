@@ -1,1 +1,8 @@
-<p>game-list works!</p>
+
+<div *ngFor="let game of gamesList index as i" (click)=showDetails(i)>
+
+  <p>{{game.name}}</p>
+  <p><img [src]=game.imageUrl alt="affiche de {{game.name}}"></p>
+  <p>Note : {{game.rating}}</p>
+
+</div>

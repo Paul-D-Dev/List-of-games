@@ -14,6 +14,7 @@ import { GameListComponent } from './components/game-list/game-list.component';
 import { GameDetailsComponent } from './components/game-details/game-details.component';
 import { GameCreatePageComponent } from './pages/game-create-page/game-create-page.component';
 import { GamePsPageComponent } from './pages/game-ps-page/game-ps-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { GamePsPageComponent } from './pages/game-ps-page/game-ps-page.component
     NoopAnimationsModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

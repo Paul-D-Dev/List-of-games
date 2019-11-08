@@ -1,3 +1,4 @@
+import { Game } from 'src/app/shared/game';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-ps-page.component.css']
 })
 export class GamePsPageComponent implements OnInit {
-
+game: Game;
   constructor() { }
 
   ngOnInit() {
   }
-
+  getDetailsGame(detailsGame) {
+    this.game = detailsGame;
+  }
 }
