@@ -25,7 +25,7 @@ Reminder :
 - folder `shared`: contains shared datas: services and datas class
 - folder `pages`: contains components linked to the `router`
 
-You have to use this array of movies: `src/app/games-mock.ts`
+You have to use this array of games: `src/app/games-mock.ts`
 
 ### Data class
 

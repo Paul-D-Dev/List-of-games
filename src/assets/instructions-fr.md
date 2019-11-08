@@ -25,7 +25,7 @@ Pour rappel :
 - dossier `shared` : contient les données partagées à savoir, les services et les classes de données
 - dossier `pages` : contient les composants liés au `router`
 
-La tableau des films que tu dois utiliser se trouve ici : `src/app/games-mock.ts`
+La tableau des jeux que tu dois utiliser se trouve ici : `src/app/games-mock.ts`
 
 ### Classe des données
 
