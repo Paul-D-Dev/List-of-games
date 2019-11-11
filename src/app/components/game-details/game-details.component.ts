@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input } from '@angular/core';
 import { Game } from 'src/app/shared/game';
 
@@ -13,4 +14,7 @@ export class GameDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  noGameClicked() {
+    return this.game;
+  }
 }
