@@ -9,28 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePsPageComponent implements OnInit {
 game: Game;
-listGames: Game;
+listGames: Game[];
   constructor(private gamesService: GamesService) { }
 
   ngOnInit() {
-    // this.getAllGames();
-    this.sendListGame();
+    this.getGamesMock();
   }
 
-  sendListGame() {
-    this.listGames = this.gamesService.getGameApi();
+  getGamesMock() {
+    this.listGames = this.gamesService.allGames;
   }
   getDetailsGame(detailsGame) {
     this.game = detailsGame;
   }
 
   // getAllGames() {
-  //   return this.gamesService.getGameApi()
-  //         .subscribe((data) => this.listGames = data);
-  // }
+    //   return this.gamesService.getGameApi()
+    //         .subscribe((data) => this.listGames = data);
+    // }
 
-  deletaGame(game) {
-    this.gamesService.deleteGame(game).subscribe();
-  }
+  //   sendListGame() {
+  //     this.listGames = this.gamesService.getGameApi();
+  //     deletaGame(game); {
+  //   this.gamesService.deleteGame(game).subscribe();
+  // }
 
 }
