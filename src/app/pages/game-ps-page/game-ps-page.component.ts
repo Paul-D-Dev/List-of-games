@@ -13,25 +13,22 @@ listGames: Game[];
   constructor(private gamesService: GamesService) { }
 
   ngOnInit() {
-    this.getGamesMock();
+    this.getAllGames();
   }
 
-  getGamesMock() {
-    this.listGames = this.gamesService.allGames;
+  getAllGames() {
+    return this.gamesService.getGameApi()
+    .subscribe((data) => this.listGames = data);
   }
-  getDetailsGame(detailsGame) {
-    this.game = detailsGame;
-  }
-
-  // getAllGames() {
-    //   return this.gamesService.getGameApi()
-    //         .subscribe((data) => this.listGames = data);
-    // }
 
   //   sendListGame() {
-  //     this.listGames = this.gamesService.getGameApi();
-  //     deletaGame(game); {
-  //   this.gamesService.deleteGame(game).subscribe();
-  // }
+    //     this.listGames = this.gamesService.getGameApi();
+    //     deletaGame(game); {
+      //   this.gamesService.deleteGame(game).subscribe();
+      // }
 
+  // Récupère l'output de GameList
+    getDetailsGame(detailsGame) {
+      this.game = detailsGame;
+    }
 }
