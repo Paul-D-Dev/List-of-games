@@ -14,12 +14,12 @@
 
   <label for="imageUrl">Affiche</label>
   <input type="text"
-  [(ngModel)]="newGame.imageUrl"
-  name="imageUrl"
-  #imageUrl="ngModel"
+  [(ngModel)]="newGame.background_image"
+  name="background_image"
+  #background_image="ngModel"
   required>
-  <div *ngIf="imageUrl.errors && myForm.submitted">
-    <div *ngIf="imageUrl.errors.required">
+  <div *ngIf="background_image.errors && myForm.submitted">
+    <div *ngIf="background_image.errors.required">
       ImageUrl is required
     </div>
   </div>

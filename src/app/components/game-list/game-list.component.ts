@@ -1,5 +1,5 @@
 import { GamesService } from './../../shared/games.service';
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Game } from 'src/app/shared/game';
 
 @Component({
@@ -8,19 +8,17 @@ import { Game } from 'src/app/shared/game';
   styleUrls: ['./game-list.component.css']
 })
 export class GameListComponent implements OnInit {
+  @Input() listGames: Game[];
   gamesList: Game[];
   @Output() detailsGame = new EventEmitter<Game>();
 
 
-  constructor(private gamesService: GamesService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getAllGames();
   }
 
-  getAllGames() {
-    return this.gamesList = this.gamesService.allGames;
-  }
+
 
   showDetails(i) {
     this.detailsGame.emit(this.gamesList[i]);

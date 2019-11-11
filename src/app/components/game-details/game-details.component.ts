@@ -13,7 +13,9 @@ export class GameDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  noGameClicked(){
+  noGameClicked() {
     return this.game;
   }
+
+
 }

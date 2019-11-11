@@ -1,3 +1,4 @@
+import { GamesService } from './../../shared/games.service';
 import { Game } from 'src/app/shared/game';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,11 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePsPageComponent implements OnInit {
 game: Game;
-  constructor() { }
+listGames: Game;
+  constructor(private gamesService: GamesService) { }
 
   ngOnInit() {
+    // this.getAllGames();
+    this.sendListGame();
+  }
+
+  sendListGame() {
+    this.listGames = this.gamesService.getGameApi();
   }
   getDetailsGame(detailsGame) {
     this.game = detailsGame;
   }
+
+  // getAllGames() {
+  //   return this.gamesService.getGameApi()
+  //         .subscribe((data) => this.listGames = data);
+  // }
+
+  deletaGame(game) {
+    this.gamesService.deleteGame(game).subscribe();
+  }
+
 }
