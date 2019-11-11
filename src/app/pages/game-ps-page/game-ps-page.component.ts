@@ -1,3 +1,4 @@
+import { GamesService } from './../../shared/games.service';
 import { Game } from 'src/app/shared/game';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-ps-page.component.css']
 })
 export class GamePsPageComponent implements OnInit {
-game: Game;
-  constructor() { }
+  listGames: Game[];
+  game: Game;
+  constructor(private gamesService: GamesService) { }
 
   ngOnInit() {
+    this.getGamesMock();
+  }
+
+  getGamesMock() {
+    this.listGames = this.gamesService.allGames;
   }
   getDetailsGame(detailsGame) {
     this.game = detailsGame;
