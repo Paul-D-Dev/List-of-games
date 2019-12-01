@@ -14,7 +14,7 @@ newGame: Game = new Game();
 
   ngOnInit() {
   }
-  addNewGame() {
-    this.gamesService.allGames.push(this.newGame);
+  addNewGame(game) {
+    this.gamesService.postGame(game).subscribe(data => console.log(data));
   }
 }

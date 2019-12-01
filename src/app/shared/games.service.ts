@@ -12,7 +12,7 @@ export class GamesService {
 
   constructor(private http: HttpClient) { }
 
-  static apiUrl = 'https://wild-games.herokuapp.com/api/v1';
+  static apiUrl = 'http://localhost:3000/';
 
  httpOptions = {
   headers: new HttpHeaders({
@@ -28,6 +28,16 @@ export class GamesService {
     return this.http.get(GamesService.apiUrl).pipe(
       map((data: Game[]) => this.allGames = data)
     );
+  }
+
+  getGameByUserID(id): Observable<Game[]> {
+    return this.http.get(GamesService.apiUrl + 'getGameByUserID/' + id).pipe(
+      map((data: Game[]) => this.allGames = data)
+    );
+  }
+
+  postGame(game: Game): Observable<Game> {
+    return this.http.post<Game>(GamesService.apiUrl + 'create', game);
   }
 
   // Delete game

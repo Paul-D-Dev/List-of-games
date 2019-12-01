@@ -1,4 +1,4 @@
-<form (submit)="myForm.valid && addNewGame()" #myForm="ngForm">
+<form (submit)="myForm.valid && addNewGame(myForm.value)" #myForm="ngForm">
 
   <label for="name">Nom du jeu : </label>
   <input type="text"
